@@ -28,7 +28,7 @@ For each record it is provided:
 The run_analysis.R script processes the above UCI HAR Dataset and creates a tidy data as per the following requirements:
 
 ### 1) Merges the training and the test sets to create one data set.
-<BR>i) Upon setting the appropriate working directory, the script would import into tables the data from all the relevant files:
+  i) Upon setting the appropriate working directory, the script would import into tables the data from all the relevant files:
 - top-level files in dataset folder 
         - activity_labels.txt
         - features.txt
