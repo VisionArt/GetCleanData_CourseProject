@@ -28,7 +28,7 @@ For each record it is provided:
 The run_analysis.R script processes the above UCI HAR Dataset and creates a tidy data as per the following requirements:
 
 ### 1) Merges the training and the test sets to create one data set.
-i) Upon setting the appropriate working directory, the script would import into tables the data from all the relevant files:
+<BR>i) Upon setting the appropriate working directory, the script would import into tables the data from all the relevant files:
 - top-level files in dataset folder 
         - activity_labels.txt
         - features.txt
@@ -40,6 +40,7 @@ i) Upon setting the appropriate working directory, the script would import into 
         - subject_test.txt
         - x_test.txt
         - y_test.txt
+<BR>
 <BR>ii) Profile the imported data with dim() command on each table:
 * activity_labels - 6 observations and 2 variables. This is a dictionary for activity numbers, for example: activity 1 = WALKING.
 * features – has 561 observations and 2 variables. 2nd variable contains the names of 561 variables from x_test and y_test files.
@@ -49,13 +50,15 @@ i) Upon setting the appropriate working directory, the script would import into 
 * subject_test - 2947 observations and 1 variable
 * x_test - 2947 observations and 561 variables
 * y_test - 2947 observations and 1 variable (activity number)
-iii) Assign of meaningful headers to the respective tables:
+<BR>
+<BR>iii) Assign of meaningful headers to the respective tables:
 - activityID
 - activityType
 - featureID
 - featureType
 - subjectID
-iv) Merge the training and test data sets into one consolidated data set using cbind and rbind functions (by row number).
+<BR>
+<BR>iv) Merge the training and test data sets into one consolidated data set using cbind and rbind functions (by row number).
 
 ### 2) Extracts only the measurements on the mean and standard deviation for each measurement. 
 - Use the grep function to scan for specific patterns to include/exclude in the table headers.
@@ -66,7 +69,7 @@ iv) Merge the training and test data sets into one consolidated data set using c
 ### 4) Appropriately labels the data set with descriptive variable names. 
 - Use the gsub function to label descriptive variable names.
   * Keep the names as short as possible.
-  * All "mean"/"std" measures are moved to the end of variables' names.
+  * All mean/sd measures are moved to the end of variables' names.
   * Remove "t" from beginning of the variables' names while keeping "f" for variables transformed with FFT.
   * Remove all "-" and "()" from labels.
   * De-duplicate vocabs like "BodyBody".
