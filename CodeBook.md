@@ -40,7 +40,7 @@ i) Upon setting the appropriate working directory, the script would import into 
         - subject_test.txt
         - x_test.txt
         - y_test.txt
-ii) Profile the imported data with dim() command on each table:
+<BR>ii) Profile the imported data with dim() command on each table:
 * activity_labels - 6 observations and 2 variables. This is a dictionary for activity numbers, for example: activity 1 = WALKING.
 * features – has 561 observations and 2 variables. 2nd variable contains the names of 561 variables from x_test and y_test files.
 * subject_train - 7352 observations and 1 variable
