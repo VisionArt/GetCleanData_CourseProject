@@ -61,7 +61,7 @@ The run_analysis.R script processes the above UCI HAR Dataset and creates a tidy
 <BR>iv) Merge the training and test data sets into one consolidated data set using cbind and rbind functions (by row number).
 
 ### 2) Extracts only the measurements on the mean and standard deviation for each measurement. 
-- Use the grep function to scan for specific patterns to include/exclude in the table headers.
+- Use the grepl function to scan for specific patterns to include in the table headers.
 
 ### 3) Uses descriptive activity names to name the activities in the data set
 - Use the merge function to label descriptive activity names, with activityID translated to activityType.
@@ -69,7 +69,7 @@ The run_analysis.R script processes the above UCI HAR Dataset and creates a tidy
 ### 4) Appropriately labels the data set with descriptive variable names. 
 - Use the gsub function to label descriptive variable names.
   * Keep the names as short as possible.
-  * All mean/sd measures are moved to the end of variables' names.
+  * All mean/std measures are moved to the end of variables' names.
   * Remove "t" from beginning of the variables' names while keeping "f" for variables transformed with FFT.
   * Remove all "-" and "()" from labels.
   * De-duplicate vocabs like "BodyBody".
@@ -83,7 +83,7 @@ This describes the variables (of interest) and transformed. For each variable it
 Please note that for all numeric variables the range of values is [-1, 1] unless provided separately for given variable.
 
 * subjectID: int; Number of the subject tested, ranged 1-30.
-* activityID: factor w/ 6 levels; Activity performed by subject. The values are:
+* activityType: factor w/ 6 levels; Activity performed by subject. The values are:
   1 WALKING
   2 WALKING_UPSTAIRS
   3 WALKING_DOWNSTAIRS
